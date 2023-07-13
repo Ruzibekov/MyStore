@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="textView">
+    <style name="textStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="fontFamily">@font/ft_poppins_regular</item>
     </style>
 
+    <style name="textStyle.500">
+        <item name="fontFamily">@font/ft_poppins_medium</item>
+    </style>
 
+    <style name="textStyle.800">
+        <item name="fontFamily">@font/ft_poppins_extra_bold</item>
+    </style>
 </resources>
