@@ -9,13 +9,14 @@
     app:cardCornerRadius="100dp"
     tools:cardBackgroundColor="@color/black">
 
+<!--    todo-->
     <TextView
         style="@style/textStyle"
         android:maxLines="1"
         android:paddingHorizontal="14dp"
         android:paddingVertical="10dp"
         android:textSize="12sp"
-        tools:text="Show all"
+        android:text="Show all"
         tools:textColor="@color/white" />
 
 </androidx.cardview.widget.CardView>

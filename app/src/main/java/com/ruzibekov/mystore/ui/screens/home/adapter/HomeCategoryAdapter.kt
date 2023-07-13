@@ -1,30 +1,41 @@
 package com.ruzibekov.mystore.ui.screens.home.adapter
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.ruzibekov.mystore.R
+import com.ruzibekov.mystore.data.model.CategoryResponse
 
-class HomeCategoryAdapter<out T> : RecyclerView.Adapter<HomeCategoryAdapter.ViewHolder>() {
+class HomeCategoryAdapter : RecyclerView.Adapter<HomeCategoryAdapter.ViewHolder>() {
+
+    private val list: MutableList<CategoryResponse> = mutableListOf()
+
+    fun addList(items: List<CategoryResponse>){
+        this.list.addAll(items)
+        notifyItemRangeInserted(list.size, items.size)
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): HomeCategoryAdapter.ViewHolder {
-        TODO("Not yet implemented")
+    ): ViewHolder {
+        return ViewHolder(
+            LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_category, parent, false)
+        )
     }
 
-    override fun onBindViewHolder(holder: HomeCategoryAdapter.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+//        holder.bind(list[position])
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = 10 //list.size()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-//        fun bind(item: CategoryResponse) {
-//
-//        }
+        fun bind(item: CategoryResponse) {
+            //todo
+        }
     }
 }
