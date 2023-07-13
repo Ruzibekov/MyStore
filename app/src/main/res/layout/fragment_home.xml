@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.screens.home.HomeFragment">
+
+    <TextView
+        style="@style/textStyle.800"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginStart="24dp"
+        android:gravity="center_vertical"
+        android:text="@string/title_home"
+        android:textColor="@color/dark"
+        android:textSize="21sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
