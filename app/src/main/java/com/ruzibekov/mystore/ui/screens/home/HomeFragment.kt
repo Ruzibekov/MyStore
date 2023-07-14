@@ -26,22 +26,28 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun View.initViews() {
+
         rvCategory = findViewById<RecyclerView?>(R.id.rv_category_list).apply {
             adapter = categoryListAdapter
         }
+
         rvProduct = findViewById<RecyclerView?>(R.id.rv_product_list).apply {
             adapter = productListAdapter
         }
+
         ivFavorites = findViewById(R.id.iv_favorites)
     }
 
     private fun initListeners() {
+
         productListAdapter.onItemClick = { id ->
-            view?.findNavController()?.navigate(R.id.action_homeFragment_to_detailsFragment)
+            view?.findNavController()
+                ?.navigate(R.id.action_home_fragment_to_details_fragment)
         }
 
         ivFavorites?.setOnClickListener {
-            view?.findNavController()?.navigate(R.id.favoritesFragment)
+            view?.findNavController()
+                ?.navigate(R.id.action_home_fragment_to_favorites_fragment)
         }
     }
 
