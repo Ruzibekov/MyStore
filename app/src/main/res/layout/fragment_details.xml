@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,17 +28,19 @@
             <TextView
                 style="@style/textStyle.800"
                 android:layout_gravity="center"
+                android:text="@string/title_details"
                 android:textColor="@color/dark"
-                android:textSize="16sp"
-                tools:text="Scanned Item Info" />
+                android:textSize="16sp" />
         </FrameLayout>
 
         <ImageView
+            android:transitionName="imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginHorizontal="70dp"
             android:layout_marginTop="90dp"
             android:src="@drawable/img_test_headphone"
+            app:layout_collapseMode="parallax"
             tools:ignore="ContentDescription" />
     </FrameLayout>
 
@@ -52,15 +55,15 @@
 
         <TextView
             style="@style/textStyle.800"
+            android:text="Headphone"
             android:textColor="@color/dark"
-            android:textSize="21sp"
-            tools:text="Headphone" />
+            android:textSize="21sp" />
 
         <TextView
             style="@style/textStyle"
             android:layout_marginTop="10dp"
-            android:textSize="16sp"
-            tools:text="This LED desk lamp is a great addition to any workspace and ver essential for developers, thanks to its compact size and numerous lighting settings." />
+            android:text="This LED desk lamp is a great addition to any workspace and ver essential for developers, thanks to its compact size and numerous lighting settings."
+            android:textSize="16sp" />
 
 
     </LinearLayout>

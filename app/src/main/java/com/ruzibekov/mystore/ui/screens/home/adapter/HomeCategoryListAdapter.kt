@@ -5,11 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ruzibekov.mystore.R
-import com.ruzibekov.mystore.data.model.CategoryResponse
+import com.ruzibekov.mystore.data.model.category.CategoryResponse
 
-class HomeCategoryAdapter : RecyclerView.Adapter<HomeCategoryAdapter.ViewHolder>() {
+class HomeCategoryListAdapter : RecyclerView.Adapter<HomeCategoryListAdapter.ViewHolder>() {
 
     private val list: MutableList<CategoryResponse> = mutableListOf()
+
+    var onItemClick: ((id: Int) -> Unit)? = null
 
     fun addList(items: List<CategoryResponse>){
         this.list.addAll(items)
@@ -27,6 +29,9 @@ class HomeCategoryAdapter : RecyclerView.Adapter<HomeCategoryAdapter.ViewHolder>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(0)
+        }
 //        holder.bind(list[position])
     }
 

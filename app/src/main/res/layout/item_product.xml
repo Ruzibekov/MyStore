@@ -35,6 +35,7 @@
         </androidx.cardview.widget.CardView>
 
         <ImageView
+            android:id="@+id/iv_product"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="9dp"

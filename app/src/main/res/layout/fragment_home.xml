@@ -7,17 +7,30 @@
     android:orientation="vertical"
     tools:context=".ui.screens.home.HomeFragment">
 
-    <TextView
-        style="@style/textStyle.800"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginStart="24dp"
-        android:gravity="center_vertical"
-        android:text="@string/title_home"
-        android:textColor="@color/dark"
-        android:textSize="21sp" />
+        android:paddingHorizontal="24dp">
+
+        <TextView
+            style="@style/textStyle.800"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="@string/title_home"
+            android:textColor="@color/dark"
+            android:textSize="21sp" />
+
+        <ImageView
+            android:id="@+id/iv_favorites"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:src="@drawable/ic_favorite"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_category"
+        android:id="@+id/rv_category_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
@@ -29,6 +42,7 @@
         tools:listitem="@layout/item_category" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_product_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
