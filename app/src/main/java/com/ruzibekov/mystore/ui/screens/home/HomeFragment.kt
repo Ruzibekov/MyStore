@@ -39,8 +39,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         productListAdapter.onItemClick = { id ->
             view?.findNavController()?.navigate(R.id.action_homeFragment_to_detailsFragment)
         }
+
         ivFavorites?.setOnClickListener {
-//            view?.findNavController()?.navigate(R.id.)
+            view?.findNavController()?.navigate(R.id.favoritesFragment)
         }
     }
 

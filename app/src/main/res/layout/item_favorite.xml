@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginVertical="12dp"
+    android:background="@drawable/rounded_light_card_r8">
+
+    <FrameLayout
+        android:id="@+id/fl_image"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_marginVertical="9dp"
+        android:layout_marginStart="7dp"
+        android:background="@drawable/rounded_white_card_r8">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="4dp"
+            android:src="@drawable/img_test_headphone"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        style="@style/textStyle.500"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@id/fl_image"
+        android:textColor="@color/dark"
+        android:textSize="16sp"
+        tools:text="Funiture Manila Adjustable Office Chair" />
+
+    <TextView
+        android:id="@+id/tv_cost"
+        style="@style/textStyle.800"
+        android:layout_below="@id/tv_desc"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@id/fl_image"
+        android:textColor="@color/red"
+        android:textSize="12sp"
+        tools:text="USD 87.00" />
+
+    <TextView
+        android:id="@+id/tv_remove"
+        style="@style/textStyle.500"
+        android:layout_alignBottom="@id/fl_image"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/rounded_white_card_r100"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="4dp"
+        android:textColor="@color/dark"
+        android:textSize="10sp"
+        tools:ignore="SmallSp"
+        tools:text="Remove" />
+
+</RelativeLayout>
