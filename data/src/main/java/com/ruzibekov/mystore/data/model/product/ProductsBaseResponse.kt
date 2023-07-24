@@ -1,6 +1,6 @@
 package com.ruzibekov.mystore.data.model.product
 
-data class ProductBaseResponse(
+data class ProductsBaseResponse(
     val limit: Int,
     val products: List<Product>,
     val skip: Int,

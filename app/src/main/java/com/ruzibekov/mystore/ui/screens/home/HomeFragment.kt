@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.ruzibekov.mystore.R
@@ -18,10 +19,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val productListAdapter = HomeProductListAdapter()
     private var ivFavorites: ImageView? = null
 
+    private var navController: NavController? = null
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        navController = view.findNavController()
+
         view.initViews()
+
         initListeners()
     }
 
@@ -41,13 +47,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun initListeners() {
 
         productListAdapter.onItemClick = { id ->
-            view?.findNavController()
-                ?.navigate(R.id.action_home_fragment_to_details_fragment)
+            navController?.navigate(R.id.action_home_fragment_to_details_fragment)
         }
 
         ivFavorites?.setOnClickListener {
-            view?.findNavController()
-                ?.navigate(R.id.action_home_fragment_to_favorites_fragment)
+            navController?.navigate(R.id.action_home_fragment_to_favorites_fragment)
         }
     }
 
